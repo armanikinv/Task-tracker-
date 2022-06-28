@@ -1,0 +1,24 @@
+/* Change `display: flex` to `display: none` */
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+/* Add this below the other styles */
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: flex;
+}
+
+.checklist-icon {
+  margin-bottom: 20px;
+}
+
+.empty-state__title, .empty-state__description {
+  margin-bottom: 20px;
+}
